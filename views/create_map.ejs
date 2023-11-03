@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>TraVerse</title>
+    <link rel="icon" href="../images/freedrink.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/create_map.css">
+    <!-- <link rel="stylesheet" href="css/create.css"> -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <canvas id="new-create"></canvas>
+
+    <div class="space">
+        <div class= "hidden"><canvas class="edit" id="edit-00"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-01"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-02"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-03"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-04"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-05"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-06"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-07"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-08"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-09"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-10"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-11"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-12"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-13"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-14"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-15"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-16"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-17"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-18"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-19"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-20"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-21"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-22"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-23"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-24"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-25"></canvas></div>
+        <div class= "hidden"><canvas class="edit" id="edit-26"></canvas></div>
+    </div>
+    <div id="detail">
+        <input type="button" id="call-distinction" value="通話エリア選択">
+        <input type="button" id="spawn-distinction" value="スポーン位置選択" onClick="spawn_position();">
+        <form name="dist_table" id="dist-table" class="hide_window" onsubmit="return false;">
+            <div id="add-box">
+                <input type="text" id="add-name">
+                <input type="button" id="add-button" value="追加">
+            </div>
+        </form>
+
+        <!-- <button id="move-map">マップ移動選択</button> -->
+    </div>
+
+
+    <form action="/post/create_mapDB" method="post" id="create_form" onsubmit="return Check()">
+        <input type="text" name="map_name" id="map-name">
+        <input type="hidden" name="world_name" id="world-name">
+        <input type="hidden" name="new_world_id" id="new-world-id">
+        <input type="hidden" name="map_data" id="map-data">
+        <input type="hidden" name="map_id" id="map-id">
+        <input type="hidden" name="map_admin" id="map-admin">
+        <input type="submit" id="create-btn" value="ワールド新規作成">
+    </form>
+
+    <script type="text/javascript" src="js/create_map.js"></script>
+</body>
+</html>
+
+

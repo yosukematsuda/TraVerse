@@ -1,0 +1,100 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../images/freedrink.ico" />
+    <link rel="stylesheet" href="css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>TraVerse ログイン</title>
+</head>
+<body>
+
+    <section class="center loginMarginTop imageMarginBottom">
+        <!-- <p class="my_english_font loginTitleFontSize">TraVerse</p> -->
+        <img src="../images/freedrink.png" height="100px">
+    </section>
+    <div id="Flash"><%= message %></div>
+
+    <div class="tabs">
+        <input id="signIn" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="signIn">ログイン</label>
+        <input id="signUp" type="radio" name="tab_item">
+        <label class="tab_item" for="signUp">会員登録</label>
+        <input id="deleteAccount" type="radio" name="tab_item">
+        <label class="tab_item" for="deleteAccount">アカウント削除</label>
+        <div class="tab_content" id="signInContent">
+            <div class="tab_content_descripstion">
+                <div class="center">
+                    <section id="sign-in" class="loginMarginTitleTop">
+                        <p class="my_japanese_font loginMarginBottom center">ログイン</p>
+                        <form method="POST" action="/post_login">
+                            <div class="my_japanese_font loginMarginBottom">アカウントID<input type="text" name="id" id="login_id" class="loginFormTextFormField accountMargin"></div>
+                            <div class="my_japanese_font loginMarginBottom">パスワード<input type="password" name="password" id="login_password" class="loginFormTextFormField passwordMargin"></div>
+                                <div class="center loginMarginBottom">
+                                    <div class="overflow">
+                                        <input type="submit" name="login" value="ログイン" class="btn-submit center my_japanese_font">
+                                    </div>
+                                </div>
+                        </form>
+                        <!-- テスト用 -->
+                        <div>
+                            <p class="my_japanese_font loginMarginBottom">テスト用アカウント</p>
+                            <div id="account"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="tab_content" id="signUpContent">
+            <div class="tab_content_descripstion">
+                <div class="center">
+                    <section id="sign-up" class="loginMarginTitleTop loginSectionSize">
+                        <p class="my_japanese_font loginMarginBottom center">新規登録</p>
+                        <!-- 新規登録フォームの内容 -->
+                        <form method="POST" action="/post/sign_up" id="sign_up_form">
+                            <div id="sign-up-page1" class="sign-up-page">
+                                <div class="my_japanese_font loginMarginBottom">アカウントID<input type="text" name="id" class="loginFormTextFormField accountMargin"></div>
+                                <div class="my_japanese_font loginMarginBottom">ユーザー名<input type="text" name="username" class="loginFormTextFormField userMargin"></div>
+                                <div class="my_japanese_font loginMarginBottom">パスワード<input type="password" name="password" class="loginFormTextFormField passwordMargin"></div>
+                                <div class="my_japanese_font loginMarginBottom">メールアドレス<input type="text" name="email" class="loginFormTextFormField mailAdressMargin"></div>
+                                <div class="center overflow"><input type="submit" data-page="2" class="sign-up-page-change btn-submit center my_japanese_font" value="次へ"></div>
+                            </div>
+                            <div id="sign-up-page2" class="hidden sign-up-page">
+                                <p class="my_japanese_font center">アイコン選択</p>
+                                <div id="sign-up-select-icon"></div>
+                                <div class="center overflow">
+                                    <input type="hidden" name="icon" id="sign-up-input-icon" class="btn-submit center my_japanese_font">
+                                </div>
+                                <div class="overflow">
+                                    <input type="submit" value="新規登録" class="btn-submit center my_japanese_font">
+                                </div>
+                                <div class="overflow">
+                                    <input type="submit" data-page="1"  class="sign-up-page-change btn-submit center my_japanese_font" value="戻る">
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="tab_content" id="deleteAccountContent">
+            <div class="tab_content_descripstion">
+                <section id="delete-account" class="loginMarginTop center">
+                    <p class="my_japanese_font center loginMarginBottom">アカウント削除</p>
+                    <form method="POST" action="/post/delete_account" id="delete_account_form">
+                        <div class="my_japanese_font loginMarginBottom">アカウントID<input type="text" name="id" class="loginFormTextFormField accountMargin"></div>
+                        <div class="my_japanese_font loginMarginBottom">パスワード<input type="password" name="password" class="loginFormTextFormField passwordMargin"></div>
+                        <div class="overflow">
+                            <div class="center"><input type="submit" name="delete-account" value="削除" class="btn-submit center my_japanese_font"></div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/login.js"></script>
+</body>
+</html>
+

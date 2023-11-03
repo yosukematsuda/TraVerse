@@ -1,0 +1,44 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../images/freedrink.ico" />
+    <link rel="stylesheet" href="css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>TraVerse 招待</title>
+</head>
+<body>
+
+    <section class="center loginMarginTop imageMarginBottom">
+        <!-- <p class="my_english_font loginTitleFontSize">TraVerse</p> -->
+        <img src="../images/freedrink.png" height="100px">
+    </section>
+
+
+    <div class="center">
+        <section id="sign-in" class="loginMarginTitleTop">
+            <p class="my_japanese_font loginMarginBottom center">ログイン</p>
+            <form method="POST" action="/post_invite">
+                <div class="my_japanese_font loginMarginBottom">アカウントID<input type="text" name="id" id="login_id" class="loginFormTextFormField accountMargin"></div>
+                <div class="my_japanese_font loginMarginBottom">パスワード<input type="password" name="password" id="login_password" class="loginFormTextFormField passwordMargin"></div>
+                <input type="hidden" name="world" id="world">
+                <div class="center loginMarginBottom">
+                    <div class="overflow">
+                        <input type="submit" name="login" value="ログイン" class="btn-submit center my_japanese_font">
+                    </div>
+                </div>
+            </form>
+            <!-- テスト用 -->
+            <div>
+                <p class="my_japanese_font loginMarginBottom">テスト用アカウント</p>
+                <div id="account"></div>
+            </div>
+        </section>
+    </div>
+
+
+    <script type="text/javascript" src="/js/invite.js"></script>
+</body>
+</html>
+

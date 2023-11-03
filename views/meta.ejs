@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head lang="ja">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>TraVerse</title>
+        <link rel="icon" href="../images/freedrink.ico" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/thread.css" />
+        <link rel="stylesheet" href="css/whiteboard.css" />
+        <link rel="stylesheet" href="css/meta_footer.css" />
+        <link rel="stylesheet" href="css/chat.css" />
+        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
+        <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <section class="flex">
+                <div class="openbtn">
+                    <span></span><span>メニュー</span><span></span>
+                </div>
+                <div class="headerTitle center">TraVerse</div>
+
+                <div>
+                    <div class="chatbtn">
+                        <span></span><span>スレッド</span><span></span>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <!-- ハンバーガーメニュー -->
+        <nav id="g-nav">
+            <div class="menuHamburgerMenuTopSizedBox"></div>
+            <div id="g-nav-list">
+                <!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                <ul>
+                    <!-- <li>
+                        <p class="my_japanese_font">参加者</p>
+                        <div id="participant" class="my_tab_japanese_font"></div>
+                    </li>
+
+                    <li>
+                        <div class="menuTabSpace2"></div>
+                    </li>
+
+                    <li>
+                        <p class="my_japanese_font">
+                            あなたのID:
+                            <span id="my-id" class="my_tab_english_font">...</span>
+                        </p>
+                    </li>
+
+                    <li>
+                        <div class="menuTabSpace2"></div>
+                    </li>
+
+                    <li class="flex">
+                        <div class="my_japanese_font">Room ID :</div>
+                        <div class="room_id my_tab_english_font"></div>
+                    </li> -->
+
+
+                    <li>
+                        <button id="invite-url" >
+                            招待コードコピー
+                        </button>
+                    </li>
+                    <li>
+                        <div class="menuTabSpace"></div>
+                    </li>
+
+                    <li>
+                        <div id="openTalkListBtn" class="my_japanese_font talkList">会話履歴を表示</div>
+                    </li>
+
+                    <li>
+                        <div class="menuTabSpace2"></div>
+                    </li>
+
+                    <li class="flex" id="permission">
+                    </li>
+
+                    <li>
+                        <div class="menuTabSpace2"></div>
+                    </li>
+
+                    <li>
+                        <a href="https://i-seifu-freedrink.com/logout">
+                            <div class="my_japanese_font logout">
+                                ログアウト
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- ////// -->
+
+        <!-- 会話履歴 -->
+        <nav id="t-nav" class="hidden">
+            <div class="talkHamburgerMenuTopSizedBox">会話履歴</div>
+            <button id="closeTalkListBtn">閉じる</button>
+            <div id="talkList"></div>
+        </nav>
+        <!-- ////// -->
+
+        <!-- スレッド ※style="display: none;"で開発中は表示消してます by 南 -->
+        <nav id="c-nav">
+            <%- include('thread'); %>
+        </nav>
+        <!-- /////////////////////// -->
+
+        <!-- チャット -->
+        <div id="chatForm"></div>
+
+
+        <!-- ////// -->
+
+        <section class="flex border">
+        <!-- ホワイトボード -->
+            <%- include('whiteboard'); %>
+        <!-- ////// -->
+            <div class="videosContainer flex">
+                <div class="swiper-slide videoMargin">
+                    <video id="video_num1" autoplay muted="true"></video>
+                </div>
+            </div>
+
+            <div>
+                <div class="overflow-h">
+                    <canvas id="meta_map"></canvas>
+                    <canvas id="meta_name"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <%- include('meta_footer'); %>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/stackblur-canvas/1.4.0/stackblur.min.js"></script>
+        <script type="text/javascript" src="js/model/player.js"></script>
+        <script type="text/javascript" src="js/model/chat_message.js"></script>
+        <script type="text/javascript" src="js/meta.js"></script>
+        <script type="text/javascript" src="js/meta/call_api.js"></script>
+        <script type="text/javascript" src="js/page_design.js"></script>
+        <script type="text/javascript" src="js/meta/camera_background.js"></script>
+        <script type="text/javascript" src="js/meta/transcription.js"></script>
+        <script type="text/javascript" src="js/meta/chat.js"></script>
+        <script type="text/javascript" src="js/meta/call.js"></script>
+        <script type="text/javascript" src="js/meta/share_display.js"></script>
+        <script type="text/javascript" src="js/meta/footer.js"></script>
+        <script type="text/javascript" src="js/drag_and_drop.js"></script>
+        <script type="text/javascript" src="js/context_menu.js"></script>
+        <script type="text/javascript" src="js/menu_bar.js"></script>
+        <script type="text/javascript" src="js/use_api/all_talk.js"></script>
+        <script type="text/javascript" src="js/map_change.js"></script>
+    </body>
+</html>

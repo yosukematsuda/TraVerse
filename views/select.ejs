@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>TraVerse</title>
+    <link rel="icon" href="../images/freedrink.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/select.css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body class="center">
+    <p class="selectMarginTop my_japanese_font selectTitleFontSize titleUnderMargin">ワールドセレクト</p>
+    <div id="select-box" class="my_japanese_font"></div>
+    <!-- <p class="selectMarginTop my_japanese_font selectTitleFontSize">マップ編集</p>
+    <div id="permission-box" class="my_japanese_font"></div> -->
+
+
+    <dialog id="favDialog">
+        <form>
+            <div class="boxPadding">
+                <p class="my_japanese_font underMargin">ワールド新規作成</p>
+                <input type="text" id="world_name" class="underMargin">
+            <div id="map-template-box" class="underMargin"></div>
+            <div class="wrap">
+                <div class="overflow">
+                    <button value="cancel" formmethod="dialog" class="btn2-submit rightMargin">閉じる</button>
+                </div>
+                <div class="overflow">
+                    <button id="confirmBtn" value="default" class="btn2-submit">作成</button>
+                </div>
+            </div>
+            </div>
+        </form>
+    </dialog>
+    <p>
+        <div class="overflow">
+            <button id="showDialog" class="btn-submit">＋</button>
+        </div>
+    </p>
+    <output></output>
+
+    <script type="text/javascript" src="js/select.js"></script>
+</body>
+</html>
