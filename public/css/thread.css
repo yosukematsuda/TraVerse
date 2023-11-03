@@ -1,0 +1,172 @@
+.selectbox-001 {
+    position: relative;
+}
+
+.selectbox-001::before,
+.selectbox-001::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+.selectbox-001::before {
+    display: inline-block;
+    right: 0;
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 0 3px 3px 0;
+    background-color: #2589d0;
+}
+
+.selectbox-001::after {
+    position: absolute;
+    top: 50%;
+    right: 1.4em;
+    transform: translate(50%, -50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+}
+
+.selectbox-001 select {
+    appearance: none;
+    min-width: 480px;
+    height: 2.8em;
+    padding: .4em 3.6em .4em .8em;
+    border: none;
+    border-radius: 3px;
+    background-color: #e6edf3;
+    color: #333;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.selectbox-001 select:focus {
+    outline: 2px solid #2589d0;
+}
+
+.leftMargin {
+    margin-left: 15px;
+}
+
+.replyLeftMargin {
+    margin-left: 45px;
+}
+
+.chatTopMargin {
+    margin-top: 10px;
+}
+
+.textFormFieldPoint {
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+}
+
+.textFormField {
+    width: 330px;
+    height: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+    margin-right: 3%;
+}
+
+.replyTextFormField {
+    width: 300px;
+    height: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+    margin-right: 3%;
+    margin-left: 70px;
+}
+
+.btn-submit{
+    width: 100px;
+    height: 30px;
+    display: block;
+    border-radius: 7px;
+    border: none;
+    border-bottom: 4px solid #1d7dcc;
+    background-color: #2196f3;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    appearance: none;
+  }
+  .btn-submit:hover {
+    margin-top: 2px;
+    background-color: #309bf2;
+    border-bottom: 2px solid #006366;
+  }
+
+  .reply-btn-submit{
+    width: 100px;
+    height: 30px;
+    display: block;
+    border-radius: 7px;
+    border: none;
+    border-bottom: 4px solid #1d7dcc;
+    background-color: #2196f3;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    appearance: none;
+  }
+  .reply-btn-submit:hover {
+    margin-top: 2px;
+    background-color: #309bf2;
+    border-bottom: 2px solid #006366;
+  }
+
+.scroll {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.chatSpace {
+    height: 720px;
+}
+
+.nameFont {
+    color: #000;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.replyNameFont {
+    color: #7e7e7e;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.chatFont {
+    color: #000;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 200;
+    font-size: 17px;
+}
+
+.replyChatFont {
+    color: #7e7e7e;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 200;
+    font-size: 17px;
+}
+
+.replyNumberFont {
+    color: #2c8892;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+}

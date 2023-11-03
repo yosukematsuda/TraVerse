@@ -1,0 +1,91 @@
+#WhiteBoardWrapper{
+    position: absolute;
+    z-index: 500;
+}
+
+/* ホワイトボード */
+#WhiteBoardArea.reduction {
+    width: 200px;
+    height: 150px;
+}
+#WhiteBoardArea{
+    position: relative;
+    border: 5px solid black;
+    border-radius: 10%;
+    overflow: hidden;
+    z-index: 500;
+}
+
+#WhiteBoardArea img {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    bottom: 0;
+    scale: 75%;
+    width: 25%;
+}
+#WhiteBoardArea img:hover {
+    scale: 100%;
+    transition: 0.2s;
+}
+
+#WhiteBoard{
+    background-color: white;
+    object-fit: contain;
+}
+
+/* ツールバー */
+#WhiteBoardToolsArea {
+    position: absolute;
+    right: -10%;
+    width: 20%;
+    height: calc(100% - 10px);
+    top:0;
+    border: 5px solid black;
+    border-radius: 10%;
+    background-color: #5ab4bd;
+    z-index: 499;
+}
+
+#WhiteBoardTools{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 499;
+}
+
+.whiteBoardTool {
+    width: 30%;
+    margin-right: 7%;
+    margin-bottom: 7%;
+    cursor: pointer;
+}
+
+.whiteBoardTool:hover{
+    scale: 120%;
+    transition: 0.2s;
+}
+
+#WhiteBoardColorPalette {
+    width: 0;
+    height: 0;
+    border:0;
+    padding: 0;
+    display: block;
+}
+
+#WhiteBoardLineWidth{
+    position: absolute;
+    background-color: #5ab4bd;
+    border: 5px solid black;
+    border-radius: 10%;
+    z-index: 498;
+    right: -70%;
+    width: 50%;
+    padding: 5% 8%;
+}
+
+.hidden{
+    display: none;
+}

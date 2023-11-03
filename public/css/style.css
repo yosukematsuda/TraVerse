@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+
+html,body{
+    overflow: hidden
+}
+
+
+body {
+    min-height: 100vh;
+    background: #fafeff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: linear-gradient(90deg, rgba(193, 243, 255, 1), rgba(25, 70, 69, 1));
+}
+
+.headerTitle {
+    color: #fff;
+    font-family: 'Itim', cursive;
+    font-weight: 500;
+    font-size: 20px;
+    white-space: pre;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.indexMarginTop {
+    margin-top: 15%;
+}
+
+.loginMarginTop {
+    margin-top: 5%;
+}
+
+.loginMarginTitleTop {
+    margin-top: 3%;
+}
+
+.loginMarginBottom {
+    margin-bottom: 30px;
+}
+
+.loginMarginLeft {
+    margin-left: 10px;
+}
+
+.loginSectionSize {
+    width: 50%;
+    height: 10%;
+}
+
+/* ログインフォームの入力欄 */
+.loginFormTextFormField {
+    height: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+    margin-right: 3%;
+}
+
+.loginBorder {
+    border: 2px solid #000;
+}
+
+.selectMarginTop {
+    margin-top: 8%;
+}
+
+.selectTitleFontSize {
+    font-size: 30px;
+}
+
+.border {
+    border-top: 2px solid #fff;
+}
+
+.my_japanese_font {
+    color: #000;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+}
+
+.my_tab_japanese_font {
+    color: #000;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 200;
+}
+
+.my_english_font {
+    color: #000;
+    font-family: 'Itim', cursive;
+    font-weight: 500;
+}
+
+.my_tab_english_font {
+    color: #000;
+    font-family: 'Itim', cursive;
+    font-weight: 100;
+}
+
+.indexTitleFontSize {
+    font-size: 100px;
+}
+
+.loginTitleFontSize {
+    font-size: 50px;
+}
+
+input {
+    color: #000;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+}
+
+.logout:hover {
+    color: #5bc6ed;
+}
+
+.talkList:hover {
+    color: #80bb5c;
+}
+
+/* メニューの空白 */
+.menuTabSpace {
+    height: 100px;
+}
+
+.menuTabSpace2 {
+    height: 20px;
+}
+
+/* ボトムタブ */
+.bottomTab {
+    height: 7%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(87, 97, 97);
+    vertical-align: middle;
+    width: 100%;
+    border-top: 1px solid #fff;
+    z-index: 5;
+}
+
+/* ボトムタブの中のボタンの上の余白 */
+.topMargin1 {
+    margin-top: 0.35%;
+}
+
+/* ボトムタブの中のセレクトタブの上の余白 */
+.topMargin2 {
+    margin-top: 80%;
+}
+
+/* ボトムタブボタンの余白 */
+.bottomButtonPadding {
+    padding: 10%;
+}
+
+.flex {
+    display: flex;
+}
+
+.overflow-h{
+    /* width: 100%;
+    height: auto; */
+    overflow: hidden;
+}
+
+video {
+    background: black;
+    width:100%;
+	height:100%;
+	object-fit:contain;
+}
+
+/* 顔ビデオの余白 */
+.videoMargin {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* 顔ビデオの画面比率(2人のときは50%) */
+.enterToRoom1 {
+    background: black;
+    width: 80%;
+    object-fit: contain;
+}
+
+.enterToRoom2 {
+    background: black;
+    width: 50%;
+    object-fit: contain;
+}
+
+.enterToRoom3 {
+    background: black;
+    width: 33%;
+    object-fit: contain;
+}
+
+.enterToRoom4 {
+    background: black;
+    width: 25%;
+    object-fit: contain;
+}
+
+.enterToRoom5 {
+    background: black;
+    width: 20%;
+    object-fit: contain;
+}
+
+/* メニューナビのヘッダー */
+.menuHamburgerMenuTopSizedBox {
+    height: 70px;
+    background-color: #b1e1f2;
+}
+/* 会話履歴のヘッダー */
+.talkHamburgerMenuTopSizedBox {
+    height: 70px;
+    background-color: #ffc681;
+}
+
+/* チャットナビのヘッダー */
+.chatHamburgerMenuTopSizedBox {
+    height: 70px;
+    background-color: #d5ffc4;
+}
+
+
+/* ハンバーガーメニュー */
+
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: relative;
+	background:#666;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    z-index: 9999;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+  }
+
+.openbtn span:nth-of-type(1),
+.openbtn span:nth-of-type(3) {
+    height: 2px;
+	background: #fff;
+  	width: 62%;
+    left: 10px;
+ }
+
+.openbtn span:nth-of-type(1) {
+	top:13px;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:19px;
+	left:11px;
+	font-size:0.5rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:36px;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu表記をしている2つ目の要素が透過して消える*/
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/* //////////////////////////// */
+
+/*========= ナビゲーションのためのCSS ===============*/
+#t-nav {
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position: fixed;
+    z-index: 1000;
+    /*ナビのスタート位置と形状*/
+    top: 70px;
+    left: -120%;
+    width: 25%;
+    min-width: 300px;
+    height: 100%;
+    /*ナビの高さ*/
+    background: #ffffff;
+    /*動き*/
+    transition: all 0.6s;
+    border-right: 5px solid #ffc681;
+}
+/*アクティブクラスがついたら位置を0に*/
+#t-nav.panelactive {
+    left: 0;
+}
+.detail_btn:hover{
+    cursor: pointer;
+    color: #2d42ff;
+}
+
+/* 会話要約詳細画面 */
+#detailWindow{
+    width: 50vw;
+    height: 50vh;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    background-color: wheat;
+    border: #000 solid 2px;
+    z-index: 1100;
+}
+/* 会話要約詳細画面のマスク */
+#detailMask {
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1099;
+}
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+	top:0;
+    left: -120%;
+	width: 25%;
+    min-width: 300px;
+    height: 100vh;/*ナビの高さ*/
+	background:#ffffff;
+    /*動き*/
+	transition: all 0.6s;
+    border-right: 5px solid #b1e1f2;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    left: 0;
+}
+
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    /* position: fixed; */
+    z-index: 999;
+    width:25%;
+    min-width: 300px;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    text-align: center;
+}
+
+#g-nav li a{
+	color: #333;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+
+/* //////////////////////// */
+
+
+
+
+/* チャット */
+
+/*ボタン全体の形状*/
+.chatbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: absolute;
+	background:#666;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+    right: 10px;
+    /* top: 80px; */
+    margin-top: 10px;
+    margin-right: 10px;
+    z-index: 9999;
+}
+
+/*ボタン内側*/
+.chatbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+  }
+
+.chatbtn span:nth-of-type(1),
+.chatbtn span:nth-of-type(3) {
+    height: 2px;
+	background: #fff;
+  	width: 62%;
+    left: 10px;
+ }
+
+.chatbtn span:nth-of-type(1) {
+	top:13px;
+}
+
+.chatbtn span:nth-of-type(2) {
+	top:19px;
+	left:11px;
+	font-size:0.5rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.chatbtn span:nth-of-type(3) {
+	top:36px;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu表記をしている2つ目の要素が透過して消える*/
+.chatbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.chatbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.chatbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
+/* .fadeDown {
+    animation-name: fadeDownAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: block;
+}
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+} */
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#c-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 4;
+    /*ナビのスタート位置と形状*/
+    right: -120%;
+	width: 25%;
+    min-width: 300px;
+    height: 85%;/*ナビの高さ*/
+	background:#ffffff;
+    /*動き*/
+	transition: all 0.6s;
+    border-left: 5px solid #d5ffc4;
+    border-bottom: 5px solid #d5ffc4;
+    border-top: 2px solid #fff;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#c-nav.panelactive{
+    right: 0;
+}
+
+
+/*ナビゲーションの縦スクロール*/
+#c-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    /* position: fixed; */
+    z-index: 999;
+    width: 25%;
+    min-width: 300px;
+    height: 84%;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#c-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    left:50%;
+    transform: translate(-50%,-50%);
+    margin-top: 100px;
+}
+
+/*リストのレイアウト設定*/
+
+#c-nav li{
+	list-style: none;
+    text-align: center;
+}
+
+#c-nav li a{
+	color: #333;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+.chat-form{
+    width: 100%;
+    z-index: 1000;
+    position: absolute;
+    bottom: 5%;
+    left: 23.5%;
+}
+
+.chat-timeline {
+    overflow:auto;
+    top: 34%;
+    width:97%;
+    height:73%;
+    padding:5px;
+    border:2px dotted #000;
+    line-height:1.5em;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+#chatForm {
+    width: 100%;
+    height: 80%;
+}
+
+/* チャットフォームの入力欄 */
+.chatFormTextFormField {
+    height: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+    margin-right: 3%;
+}
+
+.roomIdTextFromChat {
+    position: relative;
+    top: 25px;
+}
+
+.drag{  /* drag-and-drop.js */
+    z-index: 501 !important;
+}
+
+.swiper-slide{
+    border: 5px solid #fff;
+    border-radius: 10%;
+    overflow: hidden;
+    z-index: 500;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    /*
+    height: 300px;
+    width: 157px;
+    */
+}
+
+.videosContainer{
+    /* width: 100%;
+    height: 100%; */
+    position: fixed;
+    z-index: 99;
+}
+
+/* ボタンスタイル */
+.buttonStyle {
+    border-radius: 10px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/* canvas */
+#meta_map{
+    position: absolute;
+}
+#meta_name{
+    position: absolute;
+}

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+
+.hidden{
+  display: none;
+}
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 700px;
+    margin: 0 auto;
+    height: 450px;
+}
+
+  /*タブのスタイル*/
+  .tab_item {
+    width: calc(100%/3);
+    height: 50px;
+    border-bottom: 3px solid #5ab4bd;
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    font-family: 'Noto Sans Japanese', sans-serif;
+  }
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+
+  /*ラジオボタンを全て消す*/
+  input[name="tab_item"] {
+    display: none;
+  }
+
+  /*タブ切り替えの中身のスタイル*/
+  .tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+  }
+
+  /*選択されているタブのコンテンツのみを表示*/
+  #signIn:checked ~ #signInContent,
+  #signUp:checked ~ #signUpContent,
+  #deleteAccount:checked ~ #deleteAccountContent {
+    display: block;
+  }
+
+  /*選択されているタブのスタイルを変える*/
+  .tabs input:checked + .tab_item {
+    background-color: #5ab4bd;
+    color: #fff;
+  }
+
+  .center {
+    text-align: center;
+    margin: auto;
+}
+
+.loginMarginTop {
+    margin-top: 5%;
+}
+
+.my_english_font {
+    color: #000;
+    font-family: 'Itim', cursive;
+    font-weight: 500;
+}
+
+.my_japanese_font {
+    color: #000;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+}
+
+.loginTitleFontSize {
+    font-size: 50px;
+}
+
+.loginMarginTitleTop {
+    margin-top: 3%;
+}
+
+.loginMarginBottom {
+    margin-bottom: 30px;
+}
+
+.imageMarginBottom {
+    margin-bottom: 70px;
+}
+
+.loginMarginLeft {
+    margin-left: 10px;
+}
+
+.loginFormTextFormField {
+    height: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+    margin-right: 3%;
+}
+
+.btn-submit{
+  margin-bottom: 30px;
+  width: 100px;
+  height: 30px;
+  display: block;
+  border-radius: 7px;
+  border: none;
+  border-bottom: 4px solid #1d7dcc;
+  background-color: #2196f3;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  appearance: none;
+}
+.btn-submit:hover {
+  margin-bottom: 28px;
+  margin-top: 2px;
+  background-color: #309bf2;
+  border-bottom: 2px solid #006366;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.accountMargin {
+  margin-left: 35px;
+}
+
+.passwordMargin {
+  margin-left: 50px;
+}
+
+.userMargin {
+  margin-left: 50px;
+}
+
+.mailAdressMargin {
+  margin-left: 20px;
+}

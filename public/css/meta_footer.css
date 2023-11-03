@@ -1,0 +1,76 @@
+footer {
+    height: 7%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    background-color: rgb(53, 53, 53);
+    vertical-align: middle;
+    width: 100%;
+    border-top: 1px solid #fff;
+    z-index: 5;
+}
+
+.footer_btn{
+    height: 75%;
+    cursor: pointer;
+}
+
+.call_btn_area{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    user-select: none;
+}
+
+.call_sources{
+    width: 15%;
+    max-width: 15%;
+}
+
+#CallButtonElm{
+    display: flex;
+    margin-left: 5%;
+    width: 30%;
+}
+
+.call_btn_label{
+    color: white;
+    font-size: 50%;
+    height: 25%;
+    width: 100%;
+}
+
+/* 参加者ウィンドウ */
+#peopleWindow{
+    z-index:501;
+    position: absolute;
+    width: 15%;
+    top:20%;
+    left: 5%;
+    background-color: white;
+    border: black 2px solid;
+    border-radius: 5%;
+}
+
+#peopleWindowHeader{
+    background-color: rgba(193, 243, 255, 1);
+    border-bottom: black 2px solid;
+    color: black;
+    padding: 5px;
+}
+
+#peopleWindowHeader div{
+    margin: 0 auto;
+    text-align: center;
+}
+#peopleWindowHeader img{
+    position:absolute;
+    right: 0;
+    top:0;
+    cursor: pointer;
+}
+
+#peopleWindowHeader img:hover {
+    opacity: 0.8;
+}

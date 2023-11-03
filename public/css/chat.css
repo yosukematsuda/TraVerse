@@ -1,0 +1,81 @@
+#ChatWindow {
+    z-index: 501;
+    position: absolute;
+    width: 30%;
+    height: 60%;
+    top: 20%;
+    left: 30%;
+    background-color: white;
+    border: black 2px solid;
+    border-radius: 5%;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+}
+
+/* ヘッダー */
+#ChatWindowHeader {
+    height: 5%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+#ChatWindowHeader svg:hover {
+    fill:rgba(193, 243, 255, 1);
+    cursor: pointer;
+}
+
+/* ボディ */
+#ChatWindowBody {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#ChatTimeline {
+    list-style: none;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.chat-id{
+    font-weight: bold;
+}
+.chat-date{
+    font-size: small;
+}
+.chat-msg{
+    border:black 1px solid;
+    border-radius: 10%;
+    padding: 1%;
+    width:fit-content;
+}
+
+.chat-msg span{
+    word-break: break-all;
+}
+
+/* フッター */
+#ChatWindowFooter {
+    height: 5%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#ChatTextField {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+#ChatSendBtn {
+    width: 6%;
+    cursor: pointer;
+}

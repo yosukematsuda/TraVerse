@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+
+/* html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} */
+
+body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.my_japanese_font {
+    color: #000;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 500;
+    white-space: pre;
+}
+
+.my_english_font {
+    color: #000;
+    font-family: 'Itim', cursive;
+    font-weight: 500;
+    white-space: pre;
+}
+
+#video{
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.videosContainer {
+    left: 0;
+    top: 0;
+}
+
+
+.Meta{
+    width: 40%;
+    height: auto;
+    float: left;
+}
+
+#squareTable{
+    float: left;
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    -webkit-user-drag: none;
+}
+td {
+    width : calc(100% / 20) ;
+    height: 33.33px ;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 8px;
+}
+
+
+.myControllerContainer {
+    text-align: center;
+    height: 100px;
+    width: 100%;
+}
+
+.select {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#paint{
+    width: 100%;
+    height: 20%;
+}
+
+button {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 20px;
+    color: #fff;
+    border-style: none;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgb(201, 212, 238)), color-stop(0.5, rgb(152, 184, 242)), to(rgb(95, 141, 248)));
+    border-radius: 5px;
+    width: 120px;
+}
+
+button:hover {
+    /* 透明度を20%に指定 */
+    opacity: 0.8;
+}
+
+video {
+    background: black;
+    width:100%;
+	height:100%;
+	object-fit:contain;
+}
+
+
+
+/* .videosContainer video {
+    height: 100%;
+} */
+
+.swiper{
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.swiper-wrapper{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+
+
+.videosContainer .swiper-slide:first-child:nth-last-child(1),
+.videosContainer .swiper-slide:first-child:nth-last-child(1) ~ .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.videosContainer .swiper-slide:first-child:nth-last-child(2),
+.videosContainer .swiper-slide:first-child:nth-last-child(2) ~ .swiper-slide {
+    width: 50%;
+    height: 100%;
+}
+
+.videosContainer .swiper-slide:first-child:nth-last-child(3),
+.videosContainer .swiper-slide:first-child:nth-last-child(3) ~ .swiper-slide {
+    width: 33.33333%;
+	list-style:none;
+	display:inline-block;
+	scroll-snap-align:center;
+	height:100%;
+}
+
+.nico{
+    background-image: url('../images/nico.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+#edit-box{
+    border: solid 2px black;
+    border-radius: 8px;
+    user-select: none;
+}
+
+#edit-box input{
+    width:50px;
+    /* display: none; */
+}
+#edit-box :checked{
+    opacity: 0.2;
+}
+
+.select_color{
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    float: left;
+    border-radius: 8px;
+}
+
+.select_color:hover{
+    opacity: 0.6;
+}
+.select_color[data-color="1"]{
+    background-color: yellow;
+    user-select: none;
+}
+.select_color[data-color="2"]{
+    background-color: lightgreen;
+    user-select: none;
+}
+.select_color[data-color="3"]{
+    background-color: skyblue;
+    user-select: none;
+}
+.select_color[data-color="4"]{
+    background-color: orange;
+    user-select: none;
+}
+.select_color[data-color="5"]{
+    background-color: gray;
+    user-select: none;
+}
+.select_color[data-color="0"]{
+    user-select: none;
+    border: gray 1px solid;
+}
+
+.select_color[data-color="0"] img{
+    width: 100%;
+    height: 100%;
+}
+
+
+td[data-call="1"]{
+    background-color: yellow;
+    user-select: none;
+}
+td[data-call="2"]{
+    background-color: lightgreen;
+    user-select: none;
+}
+td[data-call="3"]{
+    background-color: skyblue;
+    user-select: none;
+}
+td[data-call="4"]{
+    background-color: orange;
+    user-select: none;
+}
+td[data-call="5"]{
+    background-color: gray;
+    user-select: none;
+}
+
+
+/* login.ejs */
+.center{
+    text-align: center;
+    font-size: 50px;
+}
+
+.center input{
+    width: 300px;
+    height: 150px;
+    font-size: 50px;
+}
+/*//////////////*/

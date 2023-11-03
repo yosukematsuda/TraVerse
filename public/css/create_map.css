@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+
+html,body{
+    overflow: hidden;
+}
+
+body {
+    min-height: 100vh;
+    background: #fafeff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: linear-gradient(90deg, rgba(193, 243, 255, 1), rgba(25, 70, 69, 1));
+
+}
+
+.flex {
+    display: flex;
+}
+
+#main-box{
+    display: flex;
+    width: 100%;
+}
+
+#sub-box{
+    margin: auto;
+}
+
+
+/* ハンバーガーメニュー */
+
+.openbtn{
+    right: 2% ;
+}
+
+.menuHamburgerMenuTopSizedBox {
+    height: 70px;
+    background-color: #b1e1f2;
+}
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+	top:0;
+    right: -120%;
+	width: 25%;
+    min-width: 300px;
+    height: 100vh;/*ナビの高さ*/
+	background:#ffffff;
+    /*動き*/
+	transition: all 0.6s;
+    border-left: 5px solid #b1e1f2;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    right: 0;
+}
+
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    /* position: fixed; */
+    z-index: 999;
+    width:25%;
+    min-width: 300px;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    text-align: center;
+}
+
+#g-nav li a{
+	color: #333;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+
+/* //////////////////////// */
+/* ハンバーガーメニュー */
+
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: relative;
+	background:#666;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    z-index: 9999;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+  }
+
+.openbtn span:nth-of-type(1),
+.openbtn span:nth-of-type(3) {
+    height: 2px;
+	background: #fff;
+  	width: 62%;
+    left: 10px;
+ }
+
+.openbtn span:nth-of-type(1) {
+	top:13px;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:19px;
+	left:11px;
+	font-size:0.6rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:36px;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu表記をしている2つ目の要素が透過して消える*/
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/* //////////////////////////// */
+
+.headerTitle {
+    color: #fff;
+    font-family: 'Itim', cursive;
+    font-weight: 500;
+    font-size: 20px;
+    white-space: pre;
+}
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+
+#new-create{
+    left: 0;
+    top: 0;
+}
+
+.space{
+    display: flex;
+}
+
+.canvas-hidden{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    float: left;
+}
+#dist-table {
+    position: absolute;
+    background-color: aqua;
+    top: 25%;
+    left: 20%;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    border: 1px solid #aaa;
+    box-shadow: 2px 2px 4px #888;
+}
+
+.hide_window{
+    display: none;
+}
+
+
+#add-table {
+    position: absolute;
+    background-color: pink;
+    top: 25%;
+    left: 20%;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    border: 1px solid #aaa;
+    box-shadow: 2px 2px 4px #888;
+}
+
+#move-map{
+    position: absolute;
+    background-color: pink;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: normal;
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    height: 80%;
+    text-align: center;
+    border: 1px solid #aaa;
+    box-shadow: 2px 2px 4px #888;
+}
+
+#move-map canvas{
+    margin: 5% 5%;
+}
+
+.close{
+    width: 10%;
+    position: absolute;
+    right: 0;
+    opacity: 0.5;
+}
+
+.close:hover{
+    transition: 0.2s;
+    scale: 110%;
+    opacity: 1;
+}
+
+.img-size{
+    margin: 2%;
+}
+
+/* /////////////////////////////////////////////////// */
+.hidden{
+    display: none;
+  }
+
+  /*タブ切り替え全体のスタイル*/
+  .tabs {
+      margin-top: 50px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 700px;
+      height: 250px;
+      right: 0;
+  }
+
+    /*タブのスタイル*/
+    .tab_item {
+      width: calc(100%/3);
+      height: 50px;
+      border-bottom: 3px solid #5ab4bd;
+      background-color: #d9d9d9;
+      line-height: 50px;
+      font-size: 16px;
+      text-align: center;
+      color: #565656;
+      display: block;
+      float: left;
+      text-align: center;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      font-family: 'Noto Sans Japanese', sans-serif;
+    }
+    .tab_item:hover {
+      opacity: 0.75;
+    }
+
+    /*ラジオボタンを全て消す*/
+    input[name="tab_item"] {
+      display: none;
+    }
+
+    /*タブ切り替えの中身のスタイル*/
+    .tab_content {
+      display: none;
+      padding: 40px 40px 0;
+      clear: both;
+      overflow: hidden;
+    }
+
+/*選択されているタブのコンテンツのみを表示*/
+  #design-1:checked ~ #design-1-Content,
+  #design-2:checked ~ #design-2-Content,
+  #design-3:checked ~ #design-3-Content {
+    display: block;
+  }
+
+  /*選択されているタブのスタイルを変える*/
+  .tabs input:checked + .tab_item {
+    background-color: #5ab4bd;
+    color: #fff;
+  }
